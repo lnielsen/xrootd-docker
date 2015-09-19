@@ -1,0 +1,22 @@
+# This file is part of xrootd-docker
+# Copyright (C) 2015 CERN.
+#
+# xrootd-docker is free software; you can redistribute it and/or modify it
+# under the terms of the Revised BSD License; see LICENSE file for more
+# details.
+
+sudo: required
+
+language: python
+
+services:
+  - docker
+
+cache:
+  - docker
+
+script:
+  - "docker build -t xrootd ."
+
+notifications:
+  email: false
